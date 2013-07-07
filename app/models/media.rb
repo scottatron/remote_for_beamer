@@ -21,6 +21,10 @@ class Media
     @parent ||= load_parent
   end
   
+  def escaped_path
+    CGI.escape @path
+  end
+  
   def load_parent
     path_array = path.split('/')
     path_array.pop

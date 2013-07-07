@@ -1,5 +1,5 @@
-DEFAULT_MEDIA_PATH = "~/Movies"
+DEFAULT_MEDIA_PATH = "~/Videos"
 
 get "/" do
-  redirect to(URI.escape("/show?media_path=#{DEFAULT_MEDIA_PATH}"))
+  redirect to(CGI.escape("/show?media_path=#{DEFAULT_MEDIA_PATH}"))
 end
